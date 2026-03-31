@@ -13,7 +13,7 @@ const Banner = () => {
                             src={bannerImg}
                         />
                         <div>
-                            <div className='bg-[#e1e7ff] rounded-full w-[240px] text-center text-sm p-1'>
+                            <div className='bg-[#e1e7ff] rounded-full w-60 text-center text-sm p-1'>
                                 <span className='text-[#9514FA] '>New: AI-Powered Tools Available</span>
                             </div>
                             <h1 className="text-5xl font-bold mt-4">Supercharge Your <br /> Digital Workflow</h1>
