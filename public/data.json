@@ -1,0 +1,137 @@
+[
+    {
+        "id": 1,
+        "name": "Starter Resume Kit",
+        "description": "Perfect for beginners to create professional resumes quickly.",
+        "price": 9.99,
+        "period": "one-time",
+        "tag": "new",
+        "tagType": "new",
+        "features": [
+            "20+ templates",
+            "Basic ATS optimization",
+            "Export to PDF"
+        ],
+        "icon": "📄"
+    },
+    {
+        "id": 2,
+        "name": "Pro Resume Builder",
+        "description": "Advanced tools for crafting standout resumes.",
+        "price": 19.99,
+        "period": "monthly",
+        "tag": "popular",
+        "tagType": "popular",
+        "features": [
+            "100+ templates",
+            "ATS optimization",
+            "Cover letter builder"
+        ],
+        "icon": "🚀"
+    },
+    {
+        "id": 3,
+        "name": "Career Booster Pack",
+        "description": "All-in-one solution for job seekers.",
+        "price": 49.99,
+        "period": "one-time",
+        "tag": "best seller",
+        "tagType": "best seller",
+        "features": [
+            "Unlimited resumes",
+            "LinkedIn optimization",
+            "Interview tips"
+        ],
+        "icon": "💼"
+    },
+    {
+        "id": 4,
+        "name": "Student Plan",
+        "description": "Affordable resume tools tailored for students.",
+        "price": 4.99,
+        "period": "monthly",
+        "tag": "new",
+        "tagType": "new",
+        "features": [
+            "15+ templates",
+            "Basic editing tools",
+            "PDF export"
+        ],
+        "icon": "🎓"
+    },
+    {
+        "id": 5,
+        "name": "Executive Package",
+        "description": "Premium features for senior professionals.",
+        "price": 99.99,
+        "period": "yearly",
+        "tag": "popular",
+        "tagType": "popular",
+        "features": [
+            "Custom templates",
+            "1-on-1 consultation",
+            "Priority support"
+        ],
+        "icon": "👔"
+    },
+    {
+        "id": 6,
+        "name": "Freelancer Toolkit",
+        "description": "Build resumes and portfolios for freelance work.",
+        "price": 14.99,
+        "period": "monthly",
+        "tag": "best seller",
+        "tagType": "best seller",
+        "features": [
+            "Portfolio builder",
+            "Client proposal templates",
+            "Export to PDF"
+        ],
+        "icon": "💻"
+    },
+    {
+        "id": 7,
+        "name": "AI Resume Assistant",
+        "description": "AI-powered suggestions to improve your resume.",
+        "price": 29.99,
+        "period": "monthly",
+        "tag": "popular",
+        "tagType": "popular",
+        "features": [
+            "AI content suggestions",
+            "Keyword optimization",
+            "Real-time feedback"
+        ],
+        "icon": "🤖"
+    },
+    {
+        "id": 8,
+        "name": "Ultimate Career Suite",
+        "description": "Complete career development package.",
+        "price": 149.99,
+        "period": "yearly",
+        "tag": "best seller",
+        "tagType": "best seller",
+        "features": [
+            "All templates",
+            "AI assistant",
+            "Career coaching"
+        ],
+        "icon": "🌟"
+    },
+    {
+        "id": 5,
+        "name": "Executive Package",
+        "description": "Premium features for senior professionals.",
+        "price": 99.99,
+        "period": "yearly",
+        "tag": "popular",
+        "tagType": "popular",
+        "features": [
+            "Custom templates",
+            "1-on-1 consultation",
+            "Priority support"
+        ],
+        "icon": "👔"
+    }
+]
