@@ -1,6 +1,5 @@
 import { ShoppingCart } from 'lucide-react';
 import React from 'react';
-import navImg from "../../assets/DigiTools.png"
 
 
 const Navbar = () => {
@@ -30,7 +29,7 @@ const Navbar = () => {
                     <div className='flex gap-3 items-center'>
                         <div className='relative'>
                             <span><ShoppingCart /></span>
-                            <span className='absolute top left'>{}</span>
+                            <span className='absolute top left'>{ }</span>
                         </div>
 
                         <button className='font-semibold'>Login</button>

@@ -11,7 +11,7 @@ const Footer = () => {
     return (
         <div className='bg-[#101727] py-30 text-white '>
             <section>
-                <div className='flex justify-between '>
+                <div className='flex  justify-between '>
                     <div className='space-y-4'>
                         <img src={footerImg} alt="" />
                         <p className='text-sm text-gray-300'>Premium digital tools for creators, <br /> professionals, and businesses. Work smarter <br /> with our suite of powerful tools.</p>
@@ -60,7 +60,7 @@ const Footer = () => {
                 </div>
 
                 <div className='flex justify-between mt-5 *:text-gray-300 text-sm'>
-                    <span>© 2026 Digitools. All rights reserved.</span>
+                    <span >© 2026 Digitools. All rights reserved.</span>
                     <ul className='flex gap-4'>
                         <li>Privacy Policy</li>
                         <li>Terms of service</li>

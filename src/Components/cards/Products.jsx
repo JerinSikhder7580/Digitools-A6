@@ -18,7 +18,7 @@ const Products = ({ cardPromise, cartData, setCartData }) => {
             return "79, 57, 246"
         }
         else if (code === "new") {
-            return "10, 136, 62" 
+            return "10, 136, 62"
         }
 
     }
@@ -30,17 +30,27 @@ const Products = ({ cardPromise, cartData, setCartData }) => {
     const handleCart = (id) => {
 
         const particularData = products.find((data) => data.id === id)
-        if (particularData) {
-            setActiveId([...activeId, id])
-            toast.success("Added to cart successfully")
-            setCartData([...cartData, particularData])
+
+        const duplicateData = cartData.find((data) => data.id === id)
+
+        if (duplicateData) {
+            return toast.error("Already Added!")
+
+
         }
+
+
+        setActiveId([...activeId, id])
+
+        toast.success("Added to cart successfully")
+        setCartData([...cartData, particularData])
+
     }
 
     return (
         <div>
             <section>
-                <div className='grid grid-cols-3 gap-4 '>
+                <div className='grid sm:grid-cols-1 md:grid-cols-3 gap-4 '>
 
                     {
                         products.map(product => {

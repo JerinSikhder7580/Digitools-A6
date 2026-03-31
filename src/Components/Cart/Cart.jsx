@@ -1,14 +1,23 @@
 import React, { useEffect, useState } from 'react';
 
 const Cart = ({ cartData, setCartData }) => {
+    // console.log(setCartData)
 
-    const [total, setTotal] = useState(0)
-    useEffect(() => {
-        cartData.forEach(data => {
 
-            setTotal((prev) => prev + data.price)
-        });
-    }, [])
+
+    const handleRemove = (id) => {
+        console.log(id)
+        const filteredData = cartData.filter(data => data.id !== id)
+        console.log(filteredData)
+        setCartData(filteredData)
+
+
+
+    }
+
+    const handleCheckout = () => {
+        setCartData([])
+    }
 
 
     return (
@@ -16,36 +25,59 @@ const Cart = ({ cartData, setCartData }) => {
             <section>
                 <div className='border border-gray-300 rounded-2xl p-10'>
                     <h1 className='mb-6'>Your Cart</h1>
-                    <div className='space-y-5'>
-                        {cartData.map((data) =>
-                            <div className='bg-[#F9FAFC] rounded-2xl p-5 flex justify-between items-center'>
-                                <div className='flex gap-5 items-center '>
-                                    <div className='bg-white h-14.5 aspect-square flex justify-center items-center rounded-full border-gray-300 border'>
-                                        <span className='text-2xl '>{data.icon}</span>
-                                    </div>
-                                    <div>
-                                        <h1>{data.name}</h1>
-                                        <p>{data.price}</p>
-                                    </div>
+
+
+                    {
+                        cartData.length !== 0 ?
+
+                            < div >
+
+                                <div className='space-y-5'>
+                                    {cartData.map((data) =>
+                                        <div className='bg-[#F9FAFC] rounded-2xl p-5 flex justify-between items-center'>
+                                            <div className='flex gap-5 items-center '>
+                                                <div className='bg-white h-14.5 aspect-square flex justify-center items-center rounded-full border-gray-300 border'>
+                                                    <span className='text-2xl '>{data.icon}</span>
+                                                </div>
+                                                <div>
+                                                    <h1 className='font-semibold text-lg'>{data.name}</h1>
+                                                    <p className='text-gray-500'>${data.price}</p>
+                                                </div>
+
+                                            </div>
+                                            <button onClick={() => handleRemove(data.id)} className='text-error cursor-pointer'>Remove</button>
+
+
+                                        </div>
+                                    )}
+
+
+
+
+
+
 
                                 </div>
-                                <button className='text-error'>Remove</button>
-
-
+                                <div className='flex justify-between py-5'>
+                                    <h2>Total:</h2>
+                                    <h6 className=' text-xl font-bold'>0</h6>
+                                </div>
+                                <button onClick={() => handleCheckout()} type="button" className="btn bg-gradient text-white rounded-full w-full">Proceed to Checkout</button>
                             </div>
-                        )}
-                    </div>
-                    <div className='flex justify-between'>
-                        <h2>Total:</h2>
-                        <h6>{total}</h6>
-                    </div>
-                    <button type="button" class="btn btn-outline-primary"></button>
+                            : <div >
+                                No Data Found
+                            </div>
+                    }
+
+
+
+
 
 
                 </div>
-            </section>
+            </section >
 
-        </div>
+        </div >
     );
 };
 

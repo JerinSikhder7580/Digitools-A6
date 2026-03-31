@@ -47,7 +47,7 @@ const App = () => {
       }
       {
         activeButton === "cart" &&
-        <Cart cartData={cartData}></Cart>
+        <Cart cartData={cartData} setCartData={setCartData}></Cart>
       }
 
 
