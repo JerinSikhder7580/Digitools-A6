@@ -18,7 +18,7 @@ const Products = ({ cardPromise, cartData, setCartData }) => {
             return "79, 57, 246"
         }
         else if (code === "new") {
-            return "10, 136, 62" // rgb
+            return "10, 136, 62" 
         }
 
     }
