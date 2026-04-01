@@ -1,3 +1,4 @@
+import { ShoppingCart } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 
 const Cart = ({ cartData, setCartData }) => {
@@ -18,6 +19,18 @@ const Cart = ({ cartData, setCartData }) => {
     const handleCheckout = () => {
         setCartData([])
     }
+
+
+    const price = () => {
+        let sum = 0
+        cartData.forEach(data => {
+            sum = sum + Number(data.price) * 100
+        })
+        return sum / 100
+    }
+
+
+
 
 
     return (
@@ -60,12 +73,20 @@ const Cart = ({ cartData, setCartData }) => {
                                 </div>
                                 <div className='flex justify-between py-5'>
                                     <h2>Total:</h2>
-                                    <h6 className=' text-xl font-bold'>0</h6>
+                                    <h6 className=' text-xl font-bold'>{price()}</h6>
                                 </div>
                                 <button onClick={() => handleCheckout()} type="button" className="btn bg-gradient text-white rounded-full w-full">Proceed to Checkout</button>
                             </div>
                             : <div >
-                                No Data Found
+                                <div>
+                                    <div className='p-11 flex  justify-center'>
+
+                                        <ShoppingCart size={80}></ShoppingCart>
+
+
+
+                                    </div>
+                                </div>
                             </div>
                     }
 

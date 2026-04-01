@@ -1,22 +1,43 @@
-import { ShoppingCart } from 'lucide-react';
-import React from 'react';
+import { Menu, ShoppingCart } from 'lucide-react';
+import React, { useState } from 'react';
 
 
 const Navbar = () => {
+    const links = <>
+        <li>Products</li>
+        <li>Features</li>
+        <li>Pricing</li>
+        <li>Testimonials</li>
+        <li>FAQ</li>
+    </>
+
+    const [dropdown, setDropdown] = useState(false)
+ 
+
+
     return (
         <div>
 
             <section>
                 <div className='flex justify-between items-center'>
-                    <div >
+                    <div className='flex items-center gap-2' >
+                        <div className='relative sm:hidden block z-10 '>
+                            <Menu onClick={() =>setDropdown(!dropdown)} className='cursor-pointer active:scale-95' />
+                            {
+                                dropdown && <ul className='absolute border bg-white p-5 rounded'>
+                                    {links}
+
+
+                                </ul>
+
+                            }
+
+
+                        </div>
                         <h1 className='text-gradient text-3xl font-bold'>DigiTools</h1>
                     </div>
-                    <ul className='flex gap-3 *:font-semibold'>
-                        <li>Products</li>
-                        <li>Features</li>
-                        <li>Pricing</li>
-                        <li>Testimonials</li>
-                        <li>FAQ</li>
+                    <ul className='sm:flex gap-7 *:font-semibold hidden'>
+                        {links}
                     </ul>
 
 
